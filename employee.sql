@@ -17,7 +17,7 @@ select
 from
 	employee e;
 
--- row_number, rank(1,2,2,4), dense_rank(1,2,2,3), lead, lag
+-- row_number, rank(1,2,2,4), dense_rank(1,2,2,3), lead(args), lag(args)
 
 select e.*, row_number() over (partition by dept_name) as rn 
 from employee e;
